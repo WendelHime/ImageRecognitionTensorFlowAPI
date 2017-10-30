@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  api:
+    dockerfile: Dockerfile
+    container_name: 'api'
+    build: './api'
+    ports: 
+      - '8080:8080'
+    volumes:
+      - './api:/go/src/app'
